@@ -32,6 +32,9 @@ services:
     image: sd-auto:67
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
+      # - ALL_PROXY=socks5://192.168.3.227:7890
+      - HTTP_PROXY=http://192.168.3.227:7890
+      - HTTPS_PROXY=http://192.168.3.227:7890
 
   auto-cpu:
     <<: *automatic
