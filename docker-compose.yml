@@ -29,7 +29,8 @@ services:
     <<: *base_service
     profiles: ["auto"]
     build: ./services/AUTOMATIC1111
-    image: sd-auto:67
+    # image: sd-auto:67
+    image: registry.cn-hangzhou.aliyuncs.com/dorthl/stable-diffusion:latest
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
       # - ALL_PROXY=socks5://192.168.3.227:7890
