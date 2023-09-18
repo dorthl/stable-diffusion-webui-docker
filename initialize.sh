@@ -13,4 +13,8 @@ git clone https://huggingface.co/XpucT/Deliberate
 
 docker compose --profile auto up --build  
 
-docker push registry.cn-hangzhou.aliyuncs.com/dorthl/pipeline-host:v2
+docker push registry.cn-hangzhou.aliyuncs.com/dorthl/stable-diffusion:latest
+docker pull registry.cn-hangzhou.aliyuncs.com/dorthl/stable-diffusion:latest
+
+7z a data.7z data -mx=9
+7z x data.7z
