@@ -14,3 +14,4 @@ git clone https://huggingface.co/XpucT/Deliberate
 docker compose --profile auto up --build  
 
 docker push registry.cn-hangzhou.aliyuncs.com/dorthl/pipeline-host:v2
+docker-compose up -d auto
