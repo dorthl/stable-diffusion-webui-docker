@@ -37,6 +37,8 @@ MOUNTS["${ROOT}/styles.csv"]="/data/config/auto/styles.csv"
 MOUNTS["${ROOT}/extensions"]="/data/config/auto/extensions"
 MOUNTS["${ROOT}/config_states"]="/data/config/auto/config_states"
 
+MOUNTS["/root/.u2net"]="/data/assets/.u2net"
+
 # extra hacks
 MOUNTS["${ROOT}/repositories/CodeFormer/weights/facelib"]="/data/.cache"
 
