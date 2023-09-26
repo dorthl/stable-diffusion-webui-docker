@@ -28,12 +28,18 @@ services:
   auto: &automatic
     <<: *base_service
     profiles: ["auto"]
-    build: ./services/AUTOMATIC1111
+    build: 
+      context: ./services/AUTOMATIC1111
+      args:
+        - HTTP_PROXY=http://192.168.3.227:7890
+        - HTTPS_PROXY=http://192.168.3.227:7890
+        - ALL_PROXY=socks5://192.168.3.227:7890
+        - NO_PROXY=localhost,127.0.0.1
     # image: sd-auto:67
     image: registry.cn-hangzhou.aliyuncs.com/dorthl/stable-diffusion:latest
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
-      # - ALL_PROXY=socks5://192.168.3.227:7890
+      # - ALL_PROXY=socks5://127.0.0.1:7890
       - HTTP_PROXY=http://192.168.3.227:7890
       - HTTPS_PROXY=http://192.168.3.227:7890
       - NO_PROXY=localhost,127.0.0.1
