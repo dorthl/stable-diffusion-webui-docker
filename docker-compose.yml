@@ -19,6 +19,7 @@ x-base_service: &base_service
 name: webui-docker
 
 services:
+
   download:
     build:
       context: ./services/download/
@@ -92,7 +93,6 @@ services:
     image: sd-comfy:5
     environment:
       - CLI_ARGS=
-
 
   comfy-cpu:
     <<: *comfy
