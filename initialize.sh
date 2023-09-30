@@ -11,7 +11,9 @@ git lfs pull
 
 git clone https://huggingface.co/XpucT/Deliberate
 
-docker compose --profile auto up --build  
+docker compose --profile auto up --build
+docker compose --profile auto-cpu up --build
+docker compose --profile download up --build
 
 docker push registry.cn-hangzhou.aliyuncs.com/dorthl/stable-diffusion:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/dorthl/stable-diffusion:latest
