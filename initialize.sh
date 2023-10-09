@@ -1,5 +1,5 @@
 # models
-sudo chown -R -v dex:wheel data
+sudo chown -R -v dex data output
 cd data/models/Stable-diffusion
 git lfs install
 git lfs pull
@@ -22,5 +22,5 @@ docker-compose up -d auto
 7z a data.7z data -mx=9
 7z x data.7z
 
-7z a stable-diffusion-webui-docker.7z data output -mx=9
+7z a stable-diffusion-webui-docker.7z data output output -mx=9
 # ai 抠图 https://zhuanlan.zhihu.com/p/648234420
