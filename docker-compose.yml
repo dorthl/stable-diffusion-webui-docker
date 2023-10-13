@@ -54,7 +54,8 @@ services:
     # image: sd-auto:67
     image: registry.cn-hangzhou.aliyuncs.com/dorthl/stable-diffusion:latest
     environment:
-      - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
+      # - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
+      - CLI_ARGS=--allow-code --lowvram --xformers --enable-insecure-extension-access --api 
       - NO_PROXY=localhost,127.0.0.1
       # - HTTP_PROXY=http://192.168.3.227:7890
       # - HTTPS_PROXY=http://192.168.3.227:7890
