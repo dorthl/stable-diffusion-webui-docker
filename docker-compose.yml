@@ -24,10 +24,10 @@ services:
     build:
       context: ./services/download/
       args:
-        # - HTTP_PROXY=http://192.168.3.227:7890
-        # - HTTPS_PROXY=http://192.168.3.227:7890
-        - HTTP_PROXY=http://192.168.0.112:7890
-        - HTTPS_PROXY=http://192.168.0.112:7890
+        - HTTP_PROXY=http://192.168.3.227:7890
+        - HTTPS_PROXY=http://192.168.3.227:7890
+        # - HTTP_PROXY=http://192.168.0.112:7890
+        # - HTTPS_PROXY=http://192.168.0.112:7890
         - NO_PROXY=localhost,127.0.0.1
     profiles: ["download"]
     volumes:
